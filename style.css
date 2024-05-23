@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.komorka {
+  height: 85px;
+  width: 85px;
+  border: 1px solid;
+}
+
+#planszaGry {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 240px;
+  font-size: 64px;
+  text-align: center;
+}
+
+.komorka:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.komorka:nth-child(-n + 3) {
+  border-top: none;
+}
+
+.komorka.komorka:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+
+.komorka:nth-child(3n) {
+  border-right: none;
+}
